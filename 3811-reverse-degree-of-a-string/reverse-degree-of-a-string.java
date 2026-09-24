@@ -1,9 +1,9 @@
 class Solution {
     public int reverseDegree(String s) {
-        String alpha = "abcdefghijklmnopqrstuvwxyz";
         int sum = 0;
-        for ( int i = 1 ; i <= s.length() ; i++){
-            sum+= (26 - alpha.indexOf(s.charAt(i-1)))*i;
+        for(int i = 0 ; i < s.length() ; i++){
+            int val = 122 - s.charAt(i)+1;
+            sum+= val*(i+1);
         }
         return sum;
     }
