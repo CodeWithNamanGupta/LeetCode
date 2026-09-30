@@ -8,6 +8,9 @@ class Solution {
         map.put('C',100);
         map.put('D',500);
         map.put('M',1000);
+        if (s.length() == 1) {
+            return map.get(s.charAt(0));
+        }
         int res = 0;
         for ( int i = 0 ; i < s.length()-1 ; i++ ) {
             if(map.get(s.charAt(i))<map.get(s.charAt(i+1))){
