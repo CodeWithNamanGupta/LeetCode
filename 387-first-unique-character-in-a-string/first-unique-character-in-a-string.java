@@ -2,16 +2,18 @@ class Solution {
     public int firstUniqChar(String s) {
         HashMap <Character, Integer> map = new HashMap <>();
         for(int i = 0 ; i < s.length() ; i++){
-            if(map.containsKey(s.charAt(i))){
-                int freq = map.get(s.charAt(i));
-                map.put(s.charAt(i),freq+1);
+            char n = s.charAt(i);
+            if(map.containsKey(n)){
+                int freq = map.get(n);
+                map.put(n,freq+1);
             }
             else{
-                map.put(s.charAt(i),1);
+                map.put(n,1);
             }
         }
         for(int i = 0 ; i < s.length(); i++){
-            if(map.get(s.charAt(i))==1) return i;
+            char n = s.charAt(i);
+            if(map.get(n)==1) return i;
         }
         return -1;
     }
