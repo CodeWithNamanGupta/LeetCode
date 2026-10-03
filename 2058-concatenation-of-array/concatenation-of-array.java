@@ -5,6 +5,7 @@ class Solution {
             arr[i] = nums[i];
             arr[i+nums.length] = nums[i];
         }
+        System.gc();
         return arr;
     }
 }
