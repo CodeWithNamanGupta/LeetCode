@@ -3,7 +3,7 @@ class Solution {
         int left = 0;
         int right = 0;
         int maxP=0;
-        for ( int i = 0 ; i < prices.length ; i++ ){
+        while(right<prices.length){
             if (prices[left]<prices[right]){
                 int tempP = prices[right]-prices[left];
                 if(maxP<tempP){
