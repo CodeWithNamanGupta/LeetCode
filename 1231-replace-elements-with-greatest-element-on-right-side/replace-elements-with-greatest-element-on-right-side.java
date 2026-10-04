@@ -6,6 +6,7 @@ class Solution {
             arr[i]=max; 
             max=Math.max(max,curr);
         }
+        System.gc();
         return arr;
     }
 }
