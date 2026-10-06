@@ -9,6 +9,6 @@ class Solution {
             }
             else break;
         }
-        return diff;
+        return Math.abs(diff);
     }
 }
